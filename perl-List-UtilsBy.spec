@@ -1,9 +1,9 @@
 %define upstream_name    List-UtilsBy
-%define upstream_version 0.06
+%define upstream_version 0.07
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 2
+Release:    %mkrel 1
 
 Summary:    Higher-order list utility functions
 License:    GPL+ or Artistic
