@@ -1,20 +1,20 @@
 %define upstream_name    List-UtilsBy
 %define upstream_version 0.07
 
-Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 1
+Name:		perl-%{upstream_name}
+Version:	%perl_convert_version %{upstream_version}
+Release:	2
 
-Summary:    Higher-order list utility functions
-License:    GPL+ or Artistic
-Group:      Development/Perl
-Url:        http://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/List/%{upstream_name}-%{upstream_version}.tar.gz
+Summary:	Higher-order list utility functions
+License:	GPL+ or Artistic
+Group:		Development/Perl
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	http://www.cpan.org/modules/by-module/List/%{upstream_name}-%{upstream_version}.tar.gz
 
-BuildRequires: perl(Test::More)
-BuildRequires: perl(Module::Build::Compat)
-BuildArch: noarch
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
+BuildRequires:	perl-devel
+BuildRequires:	perl(Test::More)
+BuildRequires:	perl(Module::Build::Compat)
+BuildArch:	noarch
 
 %description
 This module provides a number of list utility functions, all of which take
@@ -33,24 +33,31 @@ value returned by the extra function, when given each value.
 %setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
-%{__perl} Makefile.PL INSTALLDIRS=vendor
-
+perl Makefile.PL INSTALLDIRS=vendor
 %make
 
 %check
 %make test
 
 %install
-rm -rf %buildroot
 %makeinstall_std
 
-%clean
-rm -rf %buildroot
-
 %files
-%defattr(-,root,root)
 %doc Changes META.yml README LICENSE
 %{_mandir}/man3/*
-%perl_vendorlib/*
+%{perl_vendorlib}/*
 
+
+%changelog
+* Thu Apr 28 2011 Guillaume Rousse <guillomovitch@mandriva.org> 0.70.0-1mdv2011.0
++ Revision: 659937
+- update to new version 0.07
+
+* Sat Apr 23 2011 Funda Wang <fwang@mandriva.org> 0.60.0-2
++ Revision: 656935
+- rebuild for updated spec-helper
+
+* Sat Nov 27 2010 Guillaume Rousse <guillomovitch@mandriva.org> 0.60.0-1mdv2011.0
++ Revision: 602044
+- import perl-List-UtilsBy
 
