@@ -1,15 +1,15 @@
 %define upstream_name    List-UtilsBy
-%define upstream_version 0.07
+%define upstream_version 0.09
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	2
+Version:	%perl_convert_version 0.09
+Release:	1
 
 Summary:	Higher-order list utility functions
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/List/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/List/List-UtilsBy-0.09.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	perl(Test::More)
@@ -60,4 +60,5 @@ perl Makefile.PL INSTALLDIRS=vendor
 * Sat Nov 27 2010 Guillaume Rousse <guillomovitch@mandriva.org> 0.60.0-1mdv2011.0
 + Revision: 602044
 - import perl-List-UtilsBy
+
 
