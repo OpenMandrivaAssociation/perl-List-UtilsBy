@@ -3,7 +3,7 @@
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version 0.09
-Release:	2
+Release:	3
 
 Summary:	Higher-order list utility functions
 License:	GPL+ or Artistic
