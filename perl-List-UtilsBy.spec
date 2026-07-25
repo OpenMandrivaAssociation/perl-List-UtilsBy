@@ -1,15 +1,15 @@
 %define upstream_name    List-UtilsBy
-%define upstream_version 0.09
+%define upstream_version 0.12
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version 0.09
-Release:	3
+Version:	%{upstream_version}
+Release:	1
 
 Summary:	Higher-order list utility functions
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/List/List-UtilsBy-0.09.tar.gz
+Url:		https://metacpan.org/dist/List-UtilsBy
+Source0:	https://cpan.metacpan.org/authors/id/P/PE/PEVANS/List-UtilsBy-0.12.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
