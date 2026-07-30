@@ -49,17 +49,3 @@ perl Makefile.PL INSTALLDIRS=vendor
 %{perl_vendorlib}/*
 
 
-%changelog
-* Thu Apr 28 2011 Guillaume Rousse <guillomovitch@mandriva.org> 0.70.0-1mdv2011.0
-+ Revision: 659937
-- update to new version 0.07
-
-* Sat Apr 23 2011 Funda Wang <fwang@mandriva.org> 0.60.0-2
-+ Revision: 656935
-- rebuild for updated spec-helper
-
-* Sat Nov 27 2010 Guillaume Rousse <guillomovitch@mandriva.org> 0.60.0-1mdv2011.0
-+ Revision: 602044
-- import perl-List-UtilsBy
-
-
