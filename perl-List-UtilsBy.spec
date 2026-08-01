@@ -3,7 +3,7 @@
 
 Name:		perl-%{upstream_name}
 Version:	0.12
-Release:	2
+Release:	3
 
 Summary:	Higher-order list utility functions
 License:	GPL+ or Artistic
@@ -40,6 +40,7 @@ perl Makefile.PL INSTALLDIRS=vendor
 %check
 # soft: do not fail package on test failures
 set +e
+make test || :
 %make test || :
 
 %install
